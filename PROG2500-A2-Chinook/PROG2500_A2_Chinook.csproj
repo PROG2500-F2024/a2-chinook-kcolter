@@ -10,9 +10,9 @@
 
   <ItemGroup>
     <None Remove="Images\album.png" />
+    <None Remove="Images\artists.png" />
     <None Remove="Images\home.png" />
-    <None Remove="Images\multiple-users-silhouette.png" />
-    <None Remove="Images\music-note.png" />
+    <None Remove="Images\tracks.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,8 +31,8 @@
   <ItemGroup>
     <Resource Include="Images\album.png" />
     <Resource Include="Images\home.png" />
-    <Resource Include="Images\multiple-users-silhouette.png" />
-    <Resource Include="Images\music-note.png" />
+    <Resource Include="Images\artists.png" />
+    <Resource Include="Images\tracks.png" />
   </ItemGroup>
 
 </Project>

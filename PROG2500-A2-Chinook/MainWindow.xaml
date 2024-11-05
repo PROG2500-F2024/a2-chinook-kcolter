@@ -9,8 +9,10 @@
 
     <Window.Resources>
         <ResourceDictionary>
-                        
-            
+            <BitmapImage x:Key="imgHome" UriSource="/Images/home.png"></BitmapImage>
+            <BitmapImage x:Key="imgArtists" UriSource="/Images/artists.png"></BitmapImage>
+            <BitmapImage x:Key="imgAlbums" UriSource="/Images/album.png"></BitmapImage>
+            <BitmapImage x:Key="imgTracks" UriSource="/Images/tracks.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
     
@@ -20,17 +22,27 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem x:Name="File" Header="_File"></MenuItem>
                 <MenuItem Header="_Pages">
-                    <MenuItem x:Name="HomeButton" Header="_Home"></MenuItem>
-                    <MenuItem x:Name="ArtistsButton" Header="_Artists"></MenuItem>
-                    <MenuItem x:Name="AlbumsButton" Header="_Albums"></MenuItem>
-                    <MenuItem x:Name="TracksButton" Header="_Tracks"></MenuItem>
+                    <MenuItem x:Name="HomeButton" Header="_Home" Click="HomeToolButton_Click"></MenuItem>
+                    <MenuItem x:Name="ArtistsButton" Header="_Artists" Click="ArtistsToolButton_Click"></MenuItem>
+                    <MenuItem x:Name="AlbumsButton" Header="_Albums" Click="AlbumsToolButton_Click"></MenuItem>
+                    <MenuItem x:Name="TracksButton" Header="_Tracks" Click="TracksToolButton_Click"></MenuItem>
                 </MenuItem>
             </Menu>
             <ToolBar DockPanel.Dock="Left">
-                <Button x:Name="HomeToolButton" ToolTip="Go to Home page"></Button>
-                <Button x:Name="ArtistsToolButton" ToolTip="Go to Artists page"></Button>
-                <Button x:Name="AlbumsToolButton" ToolTip="Go to Albums page"></Button>
-                <Button x:Name="TracksToolButton" ToolTip="Go to Tracks page"></Button>
+                <StackPanel Orientation="Vertical" Height="auto" MaxWidth="100">
+                    <Button x:Name="HomeToolButton" ToolTip="Go to Home page" Click="HomeToolButton_Click">
+                        <Image Source="{StaticResource imgHome}"></Image>
+                    </Button>
+                    <Button x:Name="ArtistsToolButton" ToolTip="Go to Artists page" Click="ArtistsToolButton_Click">
+                        <Image Source="{StaticResource imgArtists}"></Image>
+                    </Button>
+                    <Button x:Name="AlbumsToolButton" ToolTip="Go to Albums page" Click="AlbumsToolButton_Click">
+                        <Image Source="{StaticResource imgAlbums}"></Image>
+                    </Button>
+                    <Button x:Name="TracksToolButton" ToolTip="Go to Tracks page" Click="TracksToolButton_Click">
+                        <Image Source="{StaticResource imgTracks}"></Image>
+                    </Button>
+                </StackPanel>
             </ToolBar>
 
             <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="auto" Height="auto"></Frame>

@@ -21,11 +21,8 @@ namespace PROG2500_A2_Chinook.Pages
     /// </summary>
     public partial class Artists : Page
     {
-
-        ChinookContext dbContext = new ChinookContext();
+        Data.ChinookContext dbContext = new Data.ChinookContext();
         CollectionViewSource artistsViewSource = new CollectionViewSource();    
-
-
 
         public Artists()
         {

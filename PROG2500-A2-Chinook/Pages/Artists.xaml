@@ -11,8 +11,8 @@
     <Page.Resources>
         <CollectionViewSource x:Key="artistsViewSource"></CollectionViewSource>
     </Page.Resources>
-    
-    <Grid>
-        
-    </Grid>
+
+    <StackPanel>
+        <TextBlock Text="ARTISTS PAGE" FontSize="72"></TextBlock>
+    </StackPanel>
 </Page>
