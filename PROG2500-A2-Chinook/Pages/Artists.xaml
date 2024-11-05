@@ -8,6 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Artists">
 
+    <Page.Resources>
+        <CollectionViewSource x:Key="artistsViewSource"></CollectionViewSource>
+    </Page.Resources>
+    
     <Grid>
         
     </Grid>

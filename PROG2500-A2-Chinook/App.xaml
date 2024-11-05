@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:PROG2500_A2_Chinook"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style TargetType="Page">
+            <Setter Property="Background" Value="LightBlue"></Setter>
+        </Style>
+
+        
     </Application.Resources>
 </Application>

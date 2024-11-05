@@ -6,7 +6,42 @@
         xmlns:local="clr-namespace:PROG2500_A2_Chinook"
         mc:Ignorable="d"
         Title="Chinook Music Store" Height="650" Width="900">
-    <Grid>
 
+    <Window.Resources>
+        <ResourceDictionary>
+                        
+            
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem x:Name="File" Header="_File"></MenuItem>
+                <MenuItem Header="_Pages">
+                    <MenuItem x:Name="HomeButton" Header="_Home"></MenuItem>
+                    <MenuItem x:Name="ArtistsButton" Header="_Artists"></MenuItem>
+                    <MenuItem x:Name="AlbumsButton" Header="_Albums"></MenuItem>
+                    <MenuItem x:Name="TracksButton" Header="_Tracks"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <ToolBar DockPanel.Dock="Left">
+                <Button x:Name="HomeToolButton" ToolTip="Go to Home page"></Button>
+                <Button x:Name="ArtistsToolButton" ToolTip="Go to Artists page"></Button>
+                <Button x:Name="AlbumsToolButton" ToolTip="Go to Albums page"></Button>
+                <Button x:Name="TracksToolButton" ToolTip="Go to Tracks page"></Button>
+            </ToolBar>
+
+            <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="auto" Height="auto"></Frame>
+            
+        </DockPanel>
     </Grid>
 </Window>
+
+    <!--Image sources:
+        <a href="https://www.flaticon.com/free-icons/music-album" title="music album icons">Music album icons created by Pixel perfect - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/music" title="music icons">Music icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Dave Gandy - Flaticon</a>
+    -->

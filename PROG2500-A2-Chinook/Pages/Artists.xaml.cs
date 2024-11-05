@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace PROG2500_A2_Chinook.Pages
     /// </summary>
     public partial class Artists : Page
     {
+
+        ChinookContext dbContext = new ChinookContext();
+        CollectionViewSource artistsViewSource = new CollectionViewSource();    
+
+
+
         public Artists()
         {
             InitializeComponent();
+
+            //tie viewsorce markup object to C# code object
+            artistsViewSource = (CollectionViewSource)FindResource(nameof(artistsViewSource));
+
+            //load data using dbcontext
+            dbContext.Artists.Load();
+
+            //set viewsource to use data
+            artistsViewSource.Source = dbContext.Artists.Local.ToObservableCollection();
         }
     }
 }

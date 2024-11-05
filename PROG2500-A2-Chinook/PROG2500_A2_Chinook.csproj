@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\album.png" />
+    <None Remove="Images\home.png" />
+    <None Remove="Images\multiple-users-silhouette.png" />
+    <None Remove="Images\music-note.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -19,6 +26,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\album.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\multiple-users-silhouette.png" />
+    <Resource Include="Images\music-note.png" />
   </ItemGroup>
 
 </Project>
