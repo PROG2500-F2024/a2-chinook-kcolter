@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PROG2500_A2_Chinook.Models;
+namespace PROG2500_A2_Chinook.Models.Generated;
 
-public partial class MediaType
+public partial class Genre
 {
-    public int MediaTypeId { get; set; }
+    public int GenreId { get; set; }
 
     public string? Name { get; set; }
 

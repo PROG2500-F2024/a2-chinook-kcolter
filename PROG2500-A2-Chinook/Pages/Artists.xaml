@@ -13,6 +13,16 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="ARTISTS PAGE" FontSize="72"></TextBlock>
+        <TextBlock Text="Chinook Artists" FontSize="36" FontWeight="Bold"></TextBlock>
+        <ScrollViewer Height="400">
+            <DataGrid ItemsSource="{Binding Source={StaticResource artistsViewSource}}"
+                  AutoGenerateColumns="False">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ArtistId}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Artist Name" Binding="{Binding Name}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
     </StackPanel>
 </Page>

@@ -15,12 +15,13 @@
             <BitmapImage x:Key="imgTracks" UriSource="/Images/tracks.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
-    
-    
+        
     <Grid>
-        <DockPanel>
+        <DockPanel Loaded="DockPanel_Loaded">
             <Menu DockPanel.Dock="Top">
-                <MenuItem x:Name="File" Header="_File"></MenuItem>
+                <MenuItem x:Name="File" Header="_File">
+                    <MenuItem x:Name="ExitButton" Header="_Exit" Click="ExitButton_Click"></MenuItem>
+                </MenuItem>
                 <MenuItem Header="_Pages">
                     <MenuItem x:Name="HomeButton" Header="_Home" Click="HomeToolButton_Click"></MenuItem>
                     <MenuItem x:Name="ArtistsButton" Header="_Artists" Click="ArtistsToolButton_Click"></MenuItem>
@@ -29,7 +30,7 @@
                 </MenuItem>
             </Menu>
             <ToolBar DockPanel.Dock="Left">
-                <StackPanel Orientation="Vertical" Height="auto" MaxWidth="100">
+                <StackPanel Orientation="Vertical" Height="auto" MaxWidth="75">
                     <Button x:Name="HomeToolButton" ToolTip="Go to Home page" Click="HomeToolButton_Click">
                         <Image Source="{StaticResource imgHome}"></Image>
                     </Button>
@@ -44,9 +45,7 @@
                     </Button>
                 </StackPanel>
             </ToolBar>
-
-            <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="auto" Height="auto"></Frame>
-            
+            <Frame x:Name="mainFrame" DockPanel.Dock="Top" Width="auto" Height="auto"></Frame>
         </DockPanel>
     </Grid>
 </Window>

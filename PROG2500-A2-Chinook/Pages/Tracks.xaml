@@ -8,7 +8,28 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Tracks">
 
-    <StackPanel>
-        <TextBlock Text="TRACKS PAGE" FontSize="72"></TextBlock>
+    <Page.Resources>
+        <CollectionViewSource x:Key="tracksViewSource"></CollectionViewSource>
+    </Page.Resources>
+    
+    <StackPanel Width="auto">
+        <TextBlock Text="Chinook Tracks" FontSize="36" FontWeight="Bold"></TextBlock>
+        <ScrollViewer Height="400">
+            <ListView ItemsSource="{Binding Source={StaticResource tracksViewSource}}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" BorderBrush="Black">
+                            <DockPanel Background="LightBlue" Width="auto">
+                                <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
+                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                    <TextBlock Text="{Binding ComposersWithPretext}"></TextBlock> 
+                                </StackPanel>
+                                <TextBlock DockPanel.Dock="Right" Text="{Binding TrackDetails}"></TextBlock>
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
     </StackPanel>
 </Page>

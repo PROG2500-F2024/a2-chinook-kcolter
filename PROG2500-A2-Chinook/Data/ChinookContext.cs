@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using PROG2500_A2_Chinook.Models;
+using PROG2500_A2_Chinook.Models.Generated;
 
 namespace PROG2500_A2_Chinook.Data;
 

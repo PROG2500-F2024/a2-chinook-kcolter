@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PROG2500_A2_Chinook.Models;
+namespace PROG2500_A2_Chinook.Models.Generated;
 
 public partial class Artist
 {

@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 
 namespace PROG2500_A2_Chinook
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
+              
 
         private void HomeToolButton_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +41,17 @@ namespace PROG2500_A2_Chinook
         private void TracksToolButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new Pages.Tracks());
+        }
+
+        private void DockPanel_Loaded(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.Home());
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            //researched from https://stackoverflow.com/a/2820377
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

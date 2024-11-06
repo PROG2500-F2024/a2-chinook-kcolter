@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home">
 
-    <StackPanel>
-        <TextBlock Text="HOME PAGE" FontSize="72"></TextBlock>
-    </StackPanel>
+    <DockPanel Width="auto" Height="auto" Background="LightBlue">
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+            <TextBlock Text="Chinook - Your one-stop shop for great music!" FontSize="36" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="Please select a page to begin your musical journey" FontSize="16"></TextBlock>
+        </StackPanel>
+    </DockPanel>
 </Page>

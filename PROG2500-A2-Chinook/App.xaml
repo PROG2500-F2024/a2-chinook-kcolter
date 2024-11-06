@@ -5,10 +5,23 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <Style TargetType="Window">
+            <Setter Property="Background" Value="SkyBlue"></Setter>
+        </Style>
+        
         <Style TargetType="Page">
-            <Setter Property="Background" Value="LightBlue"></Setter>
+            <Setter Property="Background" Value="SkyBlue"></Setter>
         </Style>
 
+        <Style TargetType="DockPanel">
+            <!--researched from https://stackoverflow.com/a/9599476 -->
+            <Setter Property="LastChildFill" Value="False"></Setter>
+        </Style>
+
+        <Style TargetType="ListViewItem">
+            <Setter Property="Padding" Value="10, 3, 10, 3"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+        </Style>
         
     </Application.Resources>
 </Application>

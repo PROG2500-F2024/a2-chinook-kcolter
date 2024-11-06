@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROG2500_A2_Chinook.Models.Generated;
+using System;
 using System.Collections.Generic;
 
 namespace PROG2500_A2_Chinook.Models;

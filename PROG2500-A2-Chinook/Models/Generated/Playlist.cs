@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PROG2500_A2_Chinook.Models;
+namespace PROG2500_A2_Chinook.Models.Generated;
 
-public partial class Genre
+public partial class Playlist
 {
-    public int GenreId { get; set; }
+    public int PlaylistId { get; set; }
 
     public string? Name { get; set; }
 
