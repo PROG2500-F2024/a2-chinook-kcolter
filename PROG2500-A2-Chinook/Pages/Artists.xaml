@@ -15,14 +15,14 @@
     <StackPanel>
         <TextBlock Text="Chinook Artists" FontSize="36" FontWeight="Bold"></TextBlock>
         <ScrollViewer Height="400">
-            <DataGrid ItemsSource="{Binding Source={StaticResource artistsViewSource}}"
-                  AutoGenerateColumns="False">
-
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding ArtistId}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Artist Name" Binding="{Binding Name}"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+            <ListView ItemsSource="{Binding Source={StaticResource artistsViewSource}}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ArtistId}"></GridViewColumn>
+                        <GridViewColumn Header="Artist Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </ScrollViewer>
     </StackPanel>
 </Page>

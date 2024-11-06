@@ -21,7 +21,6 @@
                         <GridViewColumn Header="ID" DisplayMemberBinding="{Binding AlbumId}"></GridViewColumn>
                         <GridViewColumn Header="Album Name" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
                     </GridView>
-
                 </ListView.View>
             </ListView>
         </ScrollViewer>
